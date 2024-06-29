@@ -1,0 +1,19 @@
+import cervezas.*
+import personas.*
+import carpas.*
+
+test "El modelo de personas funciona correctamente" {
+
+	const rub1 = new Rubia(contenidoDeLupulo = 12, paisDeOrigen = "Alemania", porcentajeDeAlcohol = 14, precioPorLitro = 500)
+	const neg1 = new Negra(contenidoDeLupulo = 5, paisDeOrigen = "Republica Checa", precioPorLitro = 800)
+	
+	const per1 = new Belga(leGustaLaMusicaTradicional = true, nivelDeAguante = 10, peso = 65)
+	const per2 = new Checo(leGustaLaMusicaTradicional = false, nivelDeAguante = 35, peso = 85)
+	const per3 = new Aleman(leGustaLaMusicaTradicional = true, nivelDeAguante = 80, peso = 98)
+	
+	const car1 = new Carpa(limiteDeGente = 2, marcaDeCerveza = neg1, metodoDeRecargo = recargoPorEbriedad, tieneBanda = true)
+	const car2 = new Carpa(limiteDeGente = 5, marcaDeCerveza = rub1, metodoDeRecargo = recargoFijo, tieneBanda = false)
+	
+	
+
+}

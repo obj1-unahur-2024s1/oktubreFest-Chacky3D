@@ -1,0 +1,27 @@
+import cervezas.*
+
+test "El modelo de 'cervezas' funciona correctamente." {
+
+	const rub1 = new Rubia(contenidoDeLupulo = 12, paisDeOrigen = "Alemania", porcentajeDeAlcohol = 14, precioPorLitro = 500)
+	const neg1 = new Negra(contenidoDeLupulo = 5, paisDeOrigen = "Republica Checa", precioPorLitro = 800)
+	const roj1 = new Roja(contenidoDeLupulo = 22, paisDeOrigen = "Belgica", precioPorLitro = 1500)
+	
+	assert.equals(14, rub1.porcentajeDeAlcohol())
+	assert.equals(10, neg1.porcentajeDeAlcohol())
+	assert.equals(20, roj1.porcentajeDeAlcohol())
+	assert.equals(0.14, rub1.graduacion())
+	assert.equals(0.1, neg1.graduacion())
+	assert.equals(0.2, roj1.graduacion())
+
+}
+
+test "El modelo de 'jarras' funciona correctamente" {
+	
+	const roj1 = new Roja(contenidoDeLupulo = 22, paisDeOrigen = "Belgica", precioPorLitro = 1500)
+	const jar1 = new Jarra(capacidad = 2, marca = roj1, precioConRecargo = 2000, seSirvioEn = "")
+	
+	assert.equals(11, jar1.lupuloPorLitro())
+	assert.equals(0.4, jar1.contenidoDeAlcohol())
+	assert.equals(3000, jar1.precioDeVenta())
+	
+}
